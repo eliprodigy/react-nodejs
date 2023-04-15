@@ -8,8 +8,10 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-app.get('/', (req, res) => {
-    res.send('A Simple Node.js Server is Up and Running.......')
+app.post('/', (req, res) => {
+    res.json({
+        message:'Hello world'
+    })
 })
 app.listen(port, ()=>{
     console.log(`Server is listening on port ${port}`)
